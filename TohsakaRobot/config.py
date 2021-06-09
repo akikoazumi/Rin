@@ -46,7 +46,7 @@ class Config(object):
     WORKERS = 8  # Number of subthreads to use. This is the recommended amount - see for yourself what works best!
     BAN_STICKER = "CAADAgADOwADPPEcAXkko5EB3YGYAg"  # banhammer marie sticker
     ALLOW_EXCL = False  # Allow ! commands as well as /
-
+    SPAMWATCH_API = "Ky0ggYUyc99aoI79Gq~6tfles0nHmjYyI9G2Vq9quGQxfXsF9SatzeoCxsAbSgq_"
 
 class Production(Config):
     LOGGER = False
