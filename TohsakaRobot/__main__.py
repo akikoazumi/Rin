@@ -169,8 +169,7 @@ def start(bot: Bot, update: Update, args: List[str]):
                         [     
                          InlineKeyboardButton(
                             text="Add Rin To Your Group",
-                            url="t.me/{}?startgroup=true".format(
-                                context.bot.username),
+                            url="t.me/{}?startgroup=true"))
                      ],
                      [
                         InlineKeyboardButton(
