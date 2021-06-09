@@ -172,11 +172,11 @@ def start(bot: Bot, update: Update, args: List[str]):
                             text="Support Chat",
                             url=f"https://t.me/artanasupport"),
                         InlineKeyboardButton(
-                            text="Kigyo Updates Channel",
+                            text="Commands",
                             callback_data="help_back")
                     ]]))
     else:
-        update.effective_message.reply_text("hey, need help?")
+        update.effective_message.reply_text("Hey, need help?")
 
 
 # for test purposes
