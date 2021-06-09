@@ -40,8 +40,8 @@ from TohsakaRobot.modules.helper_funcs.misc import paginate_modules
 PM_START_TEXT = """
 Hi {}, my name is {}!
 I'm a group management bot with a few fun extras ;)
-
-You can view my command with type /help
+I can manage your group and your data is safely with me 
+And me have any fun modules for your life
 """
 
 HELP_STRINGS = """
@@ -61,8 +61,6 @@ And the following:
     dispatcher.bot.first_name,
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
 )
-
-RIN_IMG = "https://telegra.ph/file/13bc252134cb13093cfc4.mp4"
 
 DONATE_STRING = """I'm free for everyone""".format(dispatcher.bot.first_name)
 
@@ -156,9 +154,8 @@ def start(bot: Bot, update: Update, args: List[str]):
 
         else:
             first_name = update.effective_user.first_name
-            update.effective_message.reply_animation(
-                RIN_IMG,
-                caption=PM_START_TEXT.format(
+            update.effective_message.reply_text(
+                PM_START_TEXT.format(
                     escape_markdown(first_name),
                     escape_markdown(bot.first_name),
                     OWNER_ID,
@@ -170,6 +167,9 @@ def start(bot: Bot, update: Update, args: List[str]):
                             InlineKeyboardButton(
                                 text="Add Rin to your group",
                                 url="t.me/{}?startgroup=true".format(bot.username),
+                            InlineKeyboardButton(
+                                text="Commands",
+                                callback_data="help_back"),
                             )
                         ]
                     ]
