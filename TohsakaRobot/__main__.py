@@ -166,18 +166,14 @@ def start(bot: Bot, update: Update, args: List[str]):
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        [     
-                         InlineKeyboardButton(
-                            text="Add Rin To Your Group",
-                            url="t.me/{}?startgroup=true"))
-                     ],
-                     [
-                        InlineKeyboardButton(
-                            text="Commands",
-                            callback_data="help_back"),
-                     ]
-                   ]
-                )
+                        [
+                            InlineKeyboardButton(
+                                text="Add Rin to your group",
+                                url="t.me/{}?startgroup=true".format(bot.username),
+                            )
+                        ]
+                    ]
+                ),
             )
     else:
         update.effective_message.reply_text("Yo, need help?")
