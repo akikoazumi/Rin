@@ -162,21 +162,21 @@ def start(bot: Bot, update: Update, args: List[str]):
                 ),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
+                    [[
+                        InlineKeyboardButton(
+                            text="Add Rin to your group",
+                            url="t.me/{}?startgroup=true".format(bot.username))
+                    ],
                     [
-                        [
-                            InlineKeyboardButton(
-                                text="Add Rin to your group",
-                                url="t.me/{}?startgroup=true".format(bot.username),
-                            InlineKeyboardButton(
-                                text="Commands",
-                                callback_data="help_back".format(bot.username),
-                            )
-                        ]
-                    ]
-                ),
-            )
+                        InlineKeyboardButton(
+                            text="Support Chat",
+                            url=f"https://t.me/artanasupport"),
+                        InlineKeyboardButton(
+                            text="Kigyo Updates Channel",
+                            callback_data="help_back")
+                    ]]))
     else:
-        update.effective_message.reply_text("Yo, need help?")
+        update.effective_message.reply_text("hey, need help?")
 
 
 # for test purposes
