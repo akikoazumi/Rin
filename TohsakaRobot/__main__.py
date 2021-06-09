@@ -169,7 +169,8 @@ def start(bot: Bot, update: Update, args: List[str]):
                                 url="t.me/{}?startgroup=true".format(bot.username),
                             InlineKeyboardButton(
                                 text="Commands",
-                                callback_data="help_back"),
+                                callback_data="help_back")
+                            )
                         ]
                     ]
                 ),
