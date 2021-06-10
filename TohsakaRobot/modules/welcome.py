@@ -7,12 +7,11 @@ from telegram import Message, Chat, Update, Bot, User, CallbackQuery
 from telegram import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.error import BadRequest
 from telegram.ext import (
-    MessageHandler,
-    Filters,
-    CommandHandler,
-    run_async,
-    CallbackQueryHandler,
     CallbackContext,
+    CallbackQueryHandler,
+    CommandHandler,
+    Filters,
+    MessageHandler,
 )
 from telegram.utils.helpers import mention_html
 
