@@ -46,7 +46,7 @@ to use me to my full potential.
 
 [join my channel](https://t.me/akarida) to get
 information on all the latest updates!
-.
+(｡•̀ᴗ-)✧
 
 """
 
