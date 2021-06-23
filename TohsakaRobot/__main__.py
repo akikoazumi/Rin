@@ -41,9 +41,14 @@ PM_START_TEXT = """
 Hello 👋 {}!, my name is {violet}
 I can manage your group with lots of useful
 features, feel free to add me to your group.
+type /help to find out more about how
+to use me to my full potential.
+
+[join my channel](https://t.me/akarida) to get
+information on all the latest updates!
+.
+
 """
-
-
 
 HELP_STRINGS = """
 Hey there! My name is *{violet}*.
