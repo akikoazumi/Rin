@@ -38,15 +38,16 @@ from TohsakaRobot.modules.helper_funcs.chat_status import is_user_admin
 from TohsakaRobot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-Hi {}, my name is {}!
-I'm a group management bot with a few fun extras ;)
-I can manage your group and your data is safely with me 
-And me have any fun modules for your life
+Hello 👋 {}!, my name is {violet}
+I can manage your group with lots of useful
+features, feel free to add me to your group.
 """
 
+
+
 HELP_STRINGS = """
-Hey there! My name is *{}*.
-I'm a modular group management bot with a few fun extras!
+Hey there! My name is *{violet}*.
+I'm a modular group management bot!
 
 *Main* commands available:
  - /start: start the bot
@@ -152,7 +153,7 @@ def start(bot: Bot, update: Update, args: List[str]):
             elif args[0][1:].isdigit() and "rules" in IMPORTED:
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
-        else:
+        else:VIOLET_IMG = "https://telegra.ph/file/acd40bb6cebd2fa0de0eb.mp4"
             first_name = update.effective_user.first_name
             update.effective_message.reply_text(
                 PM_START_TEXT.format(
@@ -164,13 +165,13 @@ def start(bot: Bot, update: Update, args: List[str]):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="Add Rin to your group",
+                            text="Add violet to your group",
                             url="t.me/{}?startgroup=true".format(bot.username))
                     ],
                     [
                         InlineKeyboardButton(
-                            text="Support Chat",
-                            url=f"https://t.me/artanasupport"),
+                            text="channel",
+                            url=f"https://t.me/akarida"),
                         InlineKeyboardButton(
                             text="Commands",
                             callback_data="help_back")
