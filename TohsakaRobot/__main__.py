@@ -47,7 +47,7 @@ features, feel free to add me to your group.
 
 HELP_STRINGS = """
 Hey there! My name is *{violet}*.
-I'm a modular group management bot!
+I'm a modular group management bot[!](https://telegra.ph/file/3898e125d5ca383bf979f.jpg)
 
 *Main* commands available:
  - /start: start the bot
@@ -61,7 +61,8 @@ And the following:
 """.format(
     dispatcher.bot.first_name,
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
-)
+
+VIOLET_IMG = "https://telegra.ph/file/acd40bb6cebd2fa0de0eb.mp4"   
 
 DONATE_STRING = """I'm free for everyone""".format(dispatcher.bot.first_name)
 
@@ -153,7 +154,7 @@ def start(bot: Bot, update: Update, args: List[str]):
             elif args[0][1:].isdigit() and "rules" in IMPORTED:
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
-        else:VIOLET_IMG = "https://telegra.ph/file/acd40bb6cebd2fa0de0eb.mp4"
+        else:
             first_name = update.effective_user.first_name
             update.effective_message.reply_text(
                 PM_START_TEXT.format(
